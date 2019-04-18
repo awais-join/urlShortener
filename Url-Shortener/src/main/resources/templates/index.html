@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<div>
+		<div>
+			<h1>URL Shortener</h1>
+		</div>
+		<form th:action="@{/}" th:object="${urlObject}" method="post">
+			<span>Enter URL:</span>
+			<input th:field="*{originalURL}" type="text" />
+			<input type="submit" value="Convert" />
+			<br />
+			<br />
+			<a th:href="@{${urlObject.convertedURL}}"><p th:text="${urlObject.convertedURL}?${#httpServletRequest.requestURL.toString()} + '' + ${urlObject.convertedURL}: ''" /></a>
+		</form>
+	</div>
+</body>
+
+</html>
