@@ -5,7 +5,6 @@
 */*.project
 */*.settings
 */target
-*/out
 *.class
 */*.class
 */classes
