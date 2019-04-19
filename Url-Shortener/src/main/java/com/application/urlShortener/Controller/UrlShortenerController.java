@@ -15,7 +15,7 @@ import com.application.urlShortener.Service.UrlShortenerService;
 @Controller
 public class UrlShortenerController {
 	
-    private final UrlShortenerService urlShortenerService;
+    private UrlShortenerService urlShortenerService;
 
     public UrlShortenerController(UrlShortenerService urlConverterService) {
         this.urlShortenerService = urlConverterService;
@@ -36,7 +36,7 @@ public class UrlShortenerController {
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String homePage(@PathVariable("id") String id) throws Exception {
+    public String redirectURL(@PathVariable("id") String id) throws Exception {
         String redirectUrl = urlShortenerService.getOriginalURL(id);
         redirectUrl = !redirectUrl.startsWith("http") ? "http://" + redirectUrl: redirectUrl;
     	return "redirect:" + redirectUrl;
