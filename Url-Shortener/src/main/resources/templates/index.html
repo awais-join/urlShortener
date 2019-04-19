@@ -13,7 +13,7 @@
 			<input type="submit" value="Convert" />
 			<br />
 			<br />
-			<a th:href="@{${urlObject.convertedURL}}"><p th:text="${urlObject.convertedURL}?${#httpServletRequest.requestURL.toString()} + '' + ${urlObject.convertedURL}: ''" /></a>
+			<a th:href="@{${urlObject.shortenedURLID}}"><p th:text="${urlObject.shortenedURLID}?${#httpServletRequest.requestURL.toString()} + '' + ${urlObject.shortenedURLID}: ''" /></a>
 		</form>
 	</div>
 </body>

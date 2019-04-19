@@ -40,6 +40,13 @@
 		    <version>2.1.0.RELEASE</version>
 		    <scope>test</scope>
 		</dependency>
+		
+		<!-- Redis Dependency -->
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		    <version>3.0.1</version>
+		</dependency>
 
 	</dependencies>
 	<build>
